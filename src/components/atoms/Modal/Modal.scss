@@ -1,0 +1,51 @@
+@import "../../../theme/index";
+
+.rf-modal {
+  background: transparent;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100vh;
+
+  z-index: 101;
+}
+
+.rf-modal--darken {
+  background: rgba($grey, 0.8);
+}
+
+.rf-modal__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: $white;
+  border-radius: 25px;
+  min-width: 464px;
+  max-width: 90vw;
+  max-height: 95vh;
+}
+
+.rf-modal__content {
+  padding: 20px 50px;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.rf-modal__close-button {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  background-color: transparent;
+  outline: none;
+  border: 0;
+  cursor: pointer;
+  z-index: 2;
+}

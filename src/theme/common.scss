@@ -1,0 +1,148 @@
+html {
+  height: 100%;
+  font-size: 16px;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: $fontFamily;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $white;
+  cursor: default;
+}
+
+// Фикс баунса в сафари
+@media (max-width: 768px) {
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    overflow: hidden;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p,
+input,
+button,
+figure,
+textarea {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+}
+
+input,
+textarea {
+  font-family: $fontFamily;
+}
+
+// сброс стилей для отображения на мобильных устройствах
+input,
+textarea {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+}
+
+// скрываем иконки очистки и отображения пароля для edge
+input::-ms-clear,
+input::-ms-reveal {
+  display: none;
+}
+
+// кастомный скролл
+::-webkit-scrollbar-track {
+  border-radius: 2px;
+  background-color: #F4F5F6;
+}
+
+::-webkit-scrollbar {
+  position: relative;
+  left: 8px;
+  width: 3px;
+  height: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background-color: #C4C4C4;
+}
+
+// запрет на ресайз textarea
+body textarea {
+  resize: none;
+}
+
+a {
+  color: $primary;
+  text-decoration: none;
+
+  &:hover {
+    color: $primary-hover;
+  }
+}
+
+button,
+input,
+textarea,
+a {
+  outline: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@media (max-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 0;
+  }
+}
+
+// Classes
+
+#root {
+  max-width: 1920px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+input:focus {
+  color: $black;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder,
+input::-moz-placeholder,
+textarea::-moz-placeholder,
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: $lightGrey;
+}

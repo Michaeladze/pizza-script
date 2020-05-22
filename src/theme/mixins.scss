@@ -1,0 +1,30 @@
+// Text Basic
+@mixin text($size: 18px, $weight: 400, $color: $black, $fontStyle: normal) {
+  font-size: $size;
+  font-weight: $weight;
+  font-style: $fontStyle;
+  color: $color;
+}
+
+@mixin disabled($opacity: 0.5) {
+  opacity: $opacity;
+  cursor: default;
+  pointer-events: none;
+}
+
+@mixin hidden {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+@mixin title2 {
+  @include text(32px, 600, $text);
+}
+
+@mixin title3 {
+  @include text(20px, 600, $text);
+}

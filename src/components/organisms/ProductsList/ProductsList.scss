@@ -1,0 +1,42 @@
+@import "../../../theme/index";
+
+.product__wrapper {
+  width: 25%;
+  padding: 0 20px 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.products-list__items {
+  margin: 0 -20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.products-list__title {
+  @include title2();
+}
+
+.products-list__header {
+  margin-bottom: 40px;
+}
+
+@media (max-width: $desktopMin) {
+  .product__wrapper {
+    width: 33.33333%;
+  }
+}
+
+@media (max-width: $mobileLarge) {
+  .product__wrapper {
+    width: 50%;
+  }
+}
+
+@media (max-width: $mobile) {
+  .product__wrapper {
+    width: 100%;
+  }
+}

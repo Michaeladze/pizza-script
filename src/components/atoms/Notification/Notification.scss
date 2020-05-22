@@ -1,0 +1,43 @@
+@import "../../../theme/index";
+
+.rf-notification {
+  margin-top: 15px;
+  position: relative;
+  width: 640px;
+  height: 60px;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(40, 40, 40, 0.9);
+  cursor: default;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.rf-notification::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 8px;
+}
+
+.rf-notification__message {
+  @include text(18px, 400, $white);
+  line-height: 20px;
+  flex: 1 0 auto;
+  text-align: center;
+}
+
+button.rf-notification__close {
+  flex-grow: 0;
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  background-color: transparent;
+  border: 0;
+  color: $white;
+  cursor: pointer;
+}

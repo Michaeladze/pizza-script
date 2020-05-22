@@ -1,0 +1,29 @@
+@import "./theme/index";
+
+.root {
+  width: 100%;
+  height: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+@media (max-width: $desktopMiddle) {
+  .root {
+    max-width: $desktopMin;
+  }
+}
+
+@media (max-width: $desktopMin) {
+  .root {
+    max-width: $tablet;
+  }
+}
+
+
+@media (max-width: $tablet) {
+  .root {
+    max-width: 100%;
+  }
+}

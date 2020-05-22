@@ -1,0 +1,46 @@
+@import "../../../theme/index";
+
+.p-button {
+  width: 100%;
+  height: 100%;
+
+  padding: 8px;
+  border: 1px solid $primary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include text(16px, 500, $text);
+  cursor: pointer;
+  border-radius: 8px;
+
+  transition: 0.15s;
+}
+
+.p-button--primary {
+  background-color: $primary;
+  color: $white
+}
+
+.p-button--secondary {
+  background-color: transparent;
+  color: $primary
+}
+
+.p-button--primary:hover {
+  background-color: $primary-hover;
+  border-color: $primary-hover;
+}
+
+.p-button--secondary:hover {
+  color: $primary-hover;
+  border-color: $primary-hover;
+}
+
+.p-button--link {
+  border: 0;
+  background-color: transparent;
+  width: auto;
+  height: auto;
+  display: inline-flex;
+}

@@ -1,0 +1,34 @@
+@import "../../../theme/index";
+
+.product {
+  width: 250px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.product__title {
+  @include title3();
+}
+
+.product__description {
+  margin-top: 10px;
+  margin-bottom: 16px;
+  @include text(14px, 400, $text);
+  line-height: 1.4;
+}
+
+.product__footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+}
+
+.product__price {
+  @include text(16px, 600, $text);
+}
+
+.product__select-button {
+  width: 115px;
+  margin-left: auto;
+}
