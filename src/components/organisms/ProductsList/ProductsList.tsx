@@ -1,11 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './ProductsList.scss';
-import Modal from '../../atoms/Modal';
-import ProductDetails from '../../modals/ProductDetails';
 import { IProduct } from '../../../_store/interfaces/menu.interfaces';
 import Product from '../../molecules/Product';
-import { useDispatch } from 'react-redux';
-import { AddToCart } from '../../../_store/actions/cart.actions';
 
 interface IProps {
   /** Products */
@@ -24,7 +20,7 @@ const ProductsList: React.FC<IProps> = ({ list, title }) => {
   // -------------------------------------------------------------------------------------------------------------------
 
   return (
-    <div className='products-list'>
+    <div className='products-list' id={title.toLowerCase()}>
       <header className='products-list__header'>
         <h2 className='products-list__title'>{title}</h2>
       </header>

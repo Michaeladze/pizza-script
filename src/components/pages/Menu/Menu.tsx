@@ -16,7 +16,7 @@ const Menu: React.FC<IProps> = () => {
 
   useEffect(() => {
     dispatch({ type: GetMenu.Pending })
-  }, []);
+  }, [dispatch]);
 
   const menu: IMenuSection[] = useSelector((store: IStore) => store.menu.collection);
 

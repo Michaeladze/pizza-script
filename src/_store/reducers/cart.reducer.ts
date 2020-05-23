@@ -1,6 +1,5 @@
 import { Action, handleActions } from 'redux-actions';
-import { GetMenu } from '../actions/menu.actions';
-import { IMenuSection, IProduct } from '../interfaces/menu.interfaces';
+import { IProduct } from '../interfaces/menu.interfaces';
 import { AddToCart, RemoveFromCart } from '../actions/cart.actions';
 
 export interface ICartState {
@@ -32,7 +31,7 @@ const cartReducer = handleActions(
       if (action.payload.item) {
         const index: number = state.collection.findIndex((p: IProduct) => p.id === action.payload.item.id);
         if (index >= 0) {
-          state.collection = state.collection.filter((p:IProduct) => p.id !== action.payload.item.id);
+          state.collection = state.collection.filter((p: IProduct) => p.id !== action.payload.item.id);
         }
         return {
           ...state,
